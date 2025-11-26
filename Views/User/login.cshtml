@@ -1,0 +1,63 @@
+@{
+ViewData["Title"] = "Login";
+ViewData["ActiveNav"] = "login";
+}
+
+<main class="max-w-md mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Notlarınıza Erişin</h1>
+        <p class="mt-2 text-gray-600">Notlarınızı görüntülemek ve düzenlemek için giriş yapın</p>
+    </div>
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+        <div class="p-6">
+            <form class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">E-posta</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Şifre</label>
+                    <input type="password" id="password" name="password" required
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <button type="submit"
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Giriş Yap
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 border-t border-gray-200 text-center">
+            <p class="text-sm text-gray-600">
+                Hesabınız yok mu?
+                <a asp-action="Register" asp-controller="User"
+                    class="font-medium text-indigo-600 hover:text-indigo-500">Kayıt olun</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loginForm = document.querySelector('form');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                if (!email || !password) {
+                    alert('Lütfen e-posta ve şifrenizi giriniz');
+                    return;
+                }
+
+                localStorage.setItem('isAuthenticated', 'true');
+                window.location.href = '/';
+            });
+        }
+    });
+</script>
+}

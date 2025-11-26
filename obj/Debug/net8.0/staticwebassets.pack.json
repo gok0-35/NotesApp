@@ -9,8 +9,28 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
       "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/js/components/auth-form.js",
+      "PackagePath": "staticwebassets/js/components/auth-form.js"
+    },
+    {
+      "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/js/components/navbar.js",
+      "PackagePath": "staticwebassets/js/components/navbar.js"
+    },
+    {
+      "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/js/components/note-card.js",
+      "PackagePath": "staticwebassets/js/components/note-card.js"
+    },
+    {
+      "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/js/script.js",
+      "PackagePath": "staticwebassets/js/script.js"
     },
     {
       "Id": "/Users/gokmensoysal/aspnetcore-forMe/NotesApp/wwwroot/js/site.js",

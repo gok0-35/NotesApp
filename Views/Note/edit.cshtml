@@ -1,0 +1,47 @@
+@{
+ViewData["Title"] = "Edit Note";
+ViewData["ActiveNav"] = "home";
+}
+
+<main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <a href="/details" class="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-900">
+                <i data-feather="arrow-left" class="mr-1"></i> Back to note
+            </a>
+            <h1 class="mt-2 text-3xl font-bold text-gray-900">Edit Note</h1>
+            <div class="mt-2 flex items-center text-sm text-gray-500">
+                <span>Last updated 2 hours ago</span>
+            </div>
+        </div>
+        <div class="flex space-x-3">
+            <button type="button"
+                class="inline-flex items-center px-3 py-2 text-sm rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                <i data-feather="save" class="mr-2"></i> Save Changes
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="px-4 py-5 sm:p-6">
+            <div class="mb-6">
+                <label for="note-title" class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                <input type="text" id="note-title" name="note-title" value="Meeting Notes"
+                    class="shadow-sm block w-full sm:text-sm border-gray-300 rounded-md p-2 border">
+            </div>
+
+            <div class="mb-4">
+                <label for="note-content" class="block text-sm font-medium text-gray-700 mb-1">Content</label>
+                <textarea id="note-content" name="note-content" rows="12"
+                    class="shadow-sm block w-full sm:text-sm border border-gray-300 rounded-md p-2">
+## Project Timeline Discussion
+...
+                </textarea>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+<script>feather.replace();</script>
+}

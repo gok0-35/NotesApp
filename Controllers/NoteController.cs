@@ -50,5 +50,17 @@ namespace NotesApp.Controllers
             return View(notes);
         }
 
+        public IActionResult Details()
+        {
+            return View();
+        }
+
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
+
+
     }
 }

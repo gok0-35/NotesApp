@@ -26,12 +26,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/Note/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZS9jcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/Note/details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZS9kZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/Note/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZS9lZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/Note/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZS9pbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/User/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9sb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/User/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9yZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/gokmensoysal/aspnetcore-forMe/NotesApp/Views/_ViewImports.cshtml]
