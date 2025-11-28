@@ -24,10 +24,43 @@ namespace NotesApp.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> Login(string username, string password)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
 
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid username or password.");
+                return View();
+            }
+            HttpContext.Session.SetInt32("UserId", user.UserId);
+            TempData["LoginSuccess"] = true;
+            return RedirectToAction("Index", "Note");
+        }
         public IActionResult Register()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(User user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(user);
+            }
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("UserId");
+            return RedirectToAction("Login");
         }
 
 

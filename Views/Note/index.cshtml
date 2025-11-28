@@ -1,33 +1,29 @@
+@model List<Note>
+
 @{
-ViewData["Title"] = "Your Notes";
-ViewData["ActiveNav"] = "home";
+    ViewData["Title"] = "Your Notes";
+    ViewData["ActiveNav"] = "home";
 }
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold text-gray-900">Your Notes</h1>
-        <a href="/create"
+        <a asp-action="Create" asp-controller="Note"
             class="inline-flex items-center px-4 py-2 text-sm rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
             <i data-feather="plus" class="mr-2"></i> New Note
         </a>
     </div>
-
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <custom-note-card title="Meeting Notes" content="Discuss project timeline..." date="2023-05-15"
-            is-secret="false" class="h-full">
-        </custom-note-card>
-
-        <custom-note-card title="Personal Journal" content="Today was a productive day..." date="2023-05-14"
-            is-secret="true" class="h-full">
-        </custom-note-card>
-
-        <custom-note-card title="Shopping List" content="Milk, Eggs, Bread..." date="2023-05-12" is-secret="false"
-            class="h-full">
-        </custom-note-card>
-    </div>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    @foreach (var note in Model)
+    {
+            <custom-note-card title="@note.Title" content="@note.Content" date="@note.CreatedAt.ToString("g")" note-id="@note.NoteId"
+                class="h-full">
+            </custom-note-card>
+    }
+        </div>
 </main>
 
 @section Scripts {
-<script>feather.replace();</script>
-<script src="~/javascript/components/note-card.js"></script>
+    <script>feather.replace();</script>
+    <script src="~/javascript/components/note-card.js"></script>
 }

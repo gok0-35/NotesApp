@@ -1,0 +1,41 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+NotesApp/notes.db
+
+# EF Core migrations snapshot (opsiyonel, sadece local test için)
+Migrations/
+
+# Publish output
+wwwroot/dist/
+wwwroot/lib/
+
+# Cache / temp
+*.tmp
+*.temp
+*.bak
+*.nupkg
+*.lock.json
+
+# OS files
+Thumbs.db
+.DS_Store
